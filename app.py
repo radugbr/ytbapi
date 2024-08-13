@@ -1,4 +1,4 @@
-from youtubesearchpython import VideosSearch, Video, ResultMode
+from youtubesearchpython.__future__ import *
 from flask import Flask
 
 app = Flask(__name__)
