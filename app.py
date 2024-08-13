@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/id/<video_id>')
 def infoPage(video_id):
     try:
-        data = Video.getInfo(f'https://youtu.be/{video_id}')
+        data = Video.getInfo(f'https://youtu.be/{video_id}', mode = ResultMode.json)
         return data
     except:
         return {'error':'something went wrong please try again later'}
