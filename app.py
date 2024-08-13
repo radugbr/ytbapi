@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/id/<video_id>')
 def infoPage(video_id):
     try:
-        data = await Video.getFormats(f'{video_id}', mode = ResultMode.json)
+        data = await Video.getFormats(f'{video_id}')
         return data
     except:
         return {'error':'something went wrong please try again later'}
